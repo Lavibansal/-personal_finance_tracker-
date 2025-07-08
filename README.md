@@ -17,9 +17,8 @@
 
 ---
 
-## 🖼️ Screenshots
+![IMG20250708202806](https://github.com/user-attachments/assets/93de479b-c703-4c61-b4d9-78795f46328f)
 
-> _Below are some representative screenshots of the app in action:_
 
 - **Login & Signup**
   - Simple, clean forms for secure authentication (email/password or Google).
@@ -84,7 +83,7 @@
 
 ## 📧 Contact & Credits
 - **Developer:** Lavi Bansal
-- **Email:** lavibansal@37gmail.com
+- **Email:** bansallavi@37gmail.com
 - **UI/UX:** Inspired by modern finance dashboards
 
 ---
