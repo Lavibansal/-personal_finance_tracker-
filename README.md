@@ -22,15 +22,27 @@
 
 - **Login & Signup**
   - Simple, clean forms for secure authentication (email/password or Google).
+![IMG20250708203112](https://github.com/user-attachments/assets/bb030022-cd0b-4618-8e95-7ba8c17e9570)
+
 - **Dashboard Overview**
   - See your current balance, total income, and total expenses at a glance.
   - Financial analytics chart shows your balance trend over time.
+
+
 - **Expense Tracker**
   - Add, view, and categorize expenses. Shared expenses show participant breakdowns.
+  - ![IMG20250708203138](https://github.com/user-attachments/assets/e1a06a51-19bf-4d92-b000-59b00be7c297)
+
 - **Loan Tracker**
   - Track borrowed/lent money, due dates, and mark loans as paid.
+
+![IMG20250708203147](https://github.com/user-attachments/assets/9752c1e5-963f-4010-ac76-54cc3772af5c)
+
 - **Transactions Table**
   - View all your transactions, filter/search, and export/import as CSV.
+
+![IMG20250708203129](https://github.com/user-attachments/assets/344515f6-a420-44b2-a63e-a58cd4bd0ce5)
+
 - **Bill Splitter**
   - Split bills with family/friends, and your share is automatically tracked in your expenses.
 
