@@ -1,0 +1,135 @@
+.label-wrapper{
+    margin-bottom: var(--space-6);
+    position: relative;
+}
+.label-input{
+    text-transform: capitalize;
+    margin-bottom: var(--space-2);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--gray-700);
+    letter-spacing: 0.025em;
+    display: block;
+    transition: var(--transition);
+}
+
+.custom-input{
+    border-width: 0;
+    border-bottom-width: 2px;
+    border-bottom-color: var(--gray-200);
+    width: 100%;
+    padding: var(--space-3) 0;
+    font-size: 1rem;
+    color: var(--gray-900);
+    background: transparent;
+    transition: var(--transition);
+    font-family: var(--font-sans);
+    position: relative;
+}
+
+.custom-input::placeholder {
+    color: var(--gray-400);
+    font-weight: 400;
+    transition: var(--transition);
+}
+
+.custom-input:focus{
+    outline: none;
+    border-bottom-color: var(--theme);
+    box-shadow: 0 1px 0 0 var(--theme);
+    transition: var(--transition);
+}
+
+.custom-input:focus::placeholder {
+    color: var(--gray-300);
+    transform: translateY(-2px);
+}
+
+.custom-input:focus + .label-input,
+.label-wrapper:focus-within .label-input {
+    color: var(--theme);
+    transform: translateY(-2px);
+}
+
+/* Input with floating label effect */
+.label-wrapper.floating {
+    position: relative;
+}
+
+.label-wrapper.floating .label-input {
+    position: absolute;
+    top: var(--space-3);
+    left: 0;
+    font-size: 1rem;
+    color: var(--gray-500);
+    transition: var(--transition);
+    pointer-events: none;
+    background: transparent;
+    padding: 0 var(--space-1);
+}
+
+.label-wrapper.floating .custom-input:focus + .label-input,
+.label-wrapper.floating .custom-input:not(:placeholder-shown) + .label-input {
+    top: -8px;
+    left: var(--space-2);
+    font-size: 0.75rem;
+    color: var(--theme);
+    background: var(--white);
+    padding: 0 var(--space-2);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Error state */
+.label-wrapper.error .custom-input {
+    border-bottom-color: var(--error);
+}
+
+.label-wrapper.error .label-input {
+    color: var(--error);
+}
+
+.label-wrapper.error .custom-input:focus {
+    border-bottom-color: var(--error);
+    box-shadow: 0 1px 0 0 var(--error);
+}
+
+/* Success state */
+.label-wrapper.success .custom-input {
+    border-bottom-color: var(--success);
+}
+
+.label-wrapper.success .label-input {
+    color: var(--success);
+}
+
+.label-wrapper.success .custom-input:focus {
+    border-bottom-color: var(--success);
+    box-shadow: 0 1px 0 0 var(--success);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .label-wrapper {
+        margin-bottom: var(--space-4);
+    }
+    
+    .label-input {
+        font-size: 0.8rem;
+    }
+    
+    .custom-input {
+        font-size: 0.9rem;
+        padding: var(--space-2) 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .label-input {
+        font-size: 0.75rem;
+    }
+    
+    .custom-input {
+        font-size: 0.85rem;
+    }
+}

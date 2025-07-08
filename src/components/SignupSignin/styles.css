@@ -1,0 +1,99 @@
+.signup-wrapper{
+    width: 90%;
+    max-width: 480px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-2xl);
+    padding: var(--space-8) var(--space-6);
+    margin: var(--space-8) auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--radius-2xl);
+    transition: var(--transition-slow);
+    animation: fadeIn 0.6s ease-out;
+}
+
+.signup-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.3);
+}
+
+.title{
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: var(--space-6);
+    color: var(--gray-900);
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+.title span {
+    background: linear-gradient(135deg, var(--theme) 0%, var(--theme-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+.p-login{
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.875rem;
+    margin: var(--space-4) 0;
+    color: var(--gray-600);
+    transition: var(--transition);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-lg);
+    background: rgba(99, 102, 241, 0.05);
+    border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.p-login:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.2);
+    color: var(--theme);
+    transform: translateY(-1px);
+}
+
+/* Form Styles */
+.signup-wrapper form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .signup-wrapper {
+        width: 95%;
+        padding: var(--space-6) var(--space-4);
+        margin: var(--space-4) auto;
+    }
+    
+    .title {
+        font-size: 1.75rem;
+        margin-bottom: var(--space-4);
+    }
+    
+    .p-login {
+    font-size: 0.8rem;
+        padding: var(--space-2) var(--space-3);
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-wrapper {
+        width: 98%;
+        padding: var(--space-5) var(--space-3);
+    }
+    
+    .title {
+        font-size: 1.5rem;
+    }
+}

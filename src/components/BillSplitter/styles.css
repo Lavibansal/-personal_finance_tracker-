@@ -1,0 +1,322 @@
+/* Bill Splitter Container */
+.bill-splitter-wrapper {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  padding: var(--space-6);
+  margin: var(--space-6) 0;
+  transition: var(--transition-slow);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.bill-splitter-wrapper:hover {
+  box-shadow: var(--shadow-2xl);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Header */
+.bill-splitter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.bill-splitter-header h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--gray-900);
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+.split-bill-btn {
+  background: linear-gradient(135deg, var(--theme) 0%, var(--theme-light) 100%);
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-6);
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.split-bill-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, var(--theme-dark) 0%, var(--theme) 100%);
+}
+
+/* Instructions Card */
+.instructions-card {
+  margin-bottom: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.instructions-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.instructions-content {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-2);
+}
+
+.instructions-icon {
+  font-size: 2rem;
+  padding: var(--space-3);
+  border-radius: var(--radius-lg);
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--theme);
+  flex-shrink: 0;
+}
+
+.instructions-text h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--gray-900);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.instructions-text p {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin: 0 0 var(--space-3) 0;
+  line-height: 1.5;
+}
+
+.instructions-text ul {
+  margin: 0;
+  padding-left: var(--space-4);
+}
+
+.instructions-text li {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin-bottom: var(--space-1);
+  line-height: 1.4;
+}
+
+/* Split Results */
+.split-results {
+  margin-top: var(--space-4);
+}
+
+.split-results h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--gray-900);
+  margin: 0 0 var(--space-3) 0;
+}
+
+.split-result-card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.split-result-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gray-300);
+}
+
+.result-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2);
+}
+
+.result-details {
+  flex: 1;
+}
+
+.result-details h5 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--gray-900);
+  margin: 0 0 var(--space-1) 0;
+}
+
+.result-amount {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--theme);
+  margin: 0 0 var(--space-1) 0;
+}
+
+/* Modal Customization */
+.bill-splitter-wrapper .ant-modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-2xl);
+  border-radius: var(--radius-xl);
+}
+
+.bill-splitter-wrapper .ant-modal-header {
+  background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+  border-bottom: 1px solid var(--gray-200);
+  padding: var(--space-4) var(--space-6);
+}
+
+.bill-splitter-wrapper .ant-modal-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--gray-900);
+  text-align: center;
+}
+
+.bill-splitter-wrapper .ant-modal-body {
+  padding: var(--space-6);
+}
+
+/* Form Styling */
+.bill-splitter-wrapper .ant-form-item-label > label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--gray-700);
+  font-size: 0.875rem;
+  letter-spacing: 0.025em;
+}
+
+.bill-splitter-wrapper .ant-input,
+.bill-splitter-wrapper .ant-picker,
+.bill-splitter-wrapper .ant-select-selector,
+.bill-splitter-wrapper .ant-input-number {
+  border: 2px solid var(--gray-200) !important;
+  border-radius: var(--radius-lg) !important;
+  padding: var(--space-3) var(--space-4) !important;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: var(--transition);
+  background: var(--white);
+}
+
+.bill-splitter-wrapper .ant-input:focus,
+.bill-splitter-wrapper .ant-picker:focus,
+.bill-splitter-wrapper .ant-select-focused .ant-select-selector,
+.bill-splitter-wrapper .ant-input-number-focused {
+  border-color: var(--theme) !important;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1) !important;
+}
+
+.bill-splitter-wrapper .ant-input:hover,
+.bill-splitter-wrapper .ant-picker:hover,
+.bill-splitter-wrapper .ant-select:hover .ant-select-selector,
+.bill-splitter-wrapper .ant-input-number:hover {
+  border-color: var(--gray-300) !important;
+}
+
+/* Divider Styling */
+.bill-splitter-wrapper .ant-divider {
+  margin: var(--space-4) 0;
+  border-color: var(--gray-200);
+}
+
+.bill-splitter-wrapper .ant-divider-inner-text {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--gray-700);
+  font-size: 0.875rem;
+}
+
+/* Alert Styling */
+.bill-splitter-wrapper .ant-alert {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .bill-splitter-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+  }
+  
+  .split-bill-btn {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .bill-splitter-wrapper {
+    padding: var(--space-4);
+    margin: var(--space-4) 0;
+  }
+  
+  .bill-splitter-header h2 {
+    font-size: 1.25rem;
+  }
+  
+  .instructions-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-2);
+  }
+  
+  .instructions-icon {
+    font-size: 1.5rem;
+    padding: var(--space-2);
+  }
+  
+  .result-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-2);
+  }
+  
+  .split-result-card {
+    margin-bottom: var(--space-2);
+  }
+}
+
+@media (max-width: 480px) {
+  .bill-splitter-wrapper {
+    padding: var(--space-3);
+  }
+  
+  .bill-splitter-header h2 {
+    font-size: 1.125rem;
+  }
+  
+  .split-bill-btn {
+    padding: var(--space-2) var(--space-4);
+    font-size: 0.875rem;
+  }
+  
+  .instructions-text h4 {
+    font-size: 1rem;
+  }
+  
+  .instructions-text p,
+  .instructions-text li {
+    font-size: 0.8rem;
+  }
+  
+  .result-details h5 {
+    font-size: 0.8rem;
+  }
+  
+  .result-amount {
+    font-size: 0.875rem;
+  }
+} 
